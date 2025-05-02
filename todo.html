@@ -1,0 +1,236 @@
+<!-- <h1 class="ok">
+    One
+</h1>
+<h1 class="ok">
+    two
+</h1>
+<h1 class="ok">
+    three
+</h1>
+
+<script>
+    var i=document.querySelectorAll(".ok")
+    for(count=0;count<i.length;count=count+1){
+        console.log(i[count].textContent)
+    }
+</script> -->
+
+<!-- <div >
+    <h1>Parveen</h1>
+    <h1>Sunil</h1>
+
+</div>
+<script>
+    var i=document.querySelector("div")
+    var h2=document.createElement("h2")
+   h2.textContent="akshay welecome"
+   i.insertAdjacentElement("afterbegin",h2)
+   </script> -->
+
+   <!-- <input id="res" >
+   <button onclick="add()">Add</button>
+   <ul id="list-cont">
+    <li>
+        Hello
+        <button onclick="deleted(event)">Delete</button>
+    </li>
+   </ul>
+
+   <script>
+    var ul=document.getElementById("list-cont")
+    var input=document.getElementById("res")
+    
+    function add(){
+    var list=document.createElement("li")
+    list.innerHTML=input.value+"<button onclick='deleted(event)'>Delete</button>"
+    ul.append(list)
+
+    }
+    function deleted(event){
+        event.target.parentElement.remove()
+
+
+    }
+    
+   </script> -->
+<!-- to do list -->
+   <!-- <input id="res">
+   <button onclick="add()">Add</button>
+   <ul id="list">
+    <li>
+        helloo
+        <button onclick="deleted(event)">Delete</button>
+    </li>
+   </ul>
+   <script>
+    var ul=document.getElementById("list")
+    var input=document.getElementById("res")
+    function add(){
+        var item=document.createElement("li")
+        item.innerHTML=input.value+"<button onclick='deleted(event)'>Deleted</button>"
+        ul.append(item)
+        
+    }
+    function deleted(event){
+        event.target.parentElement.remove()
+    }
+
+   </script> -->
+   
+<!-- <h1>Student Form</h1>
+<form id="res" onsubmit="event.preventDefault(); formdata();">
+    <table border="2" id="t1">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="gender" value="Male">Male
+                <input type="radio" name="gender" value="Female">Female
+            </td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" id="age"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" id="email"></td>
+        </tr>
+        <tr>
+            <td colspan="10">
+                <button type="submit">Save</button>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="2" id="outputTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Email ID</th>
+            <th>Actions</th>
+        </tr>
+       
+    </table>
+</form>
+
+<script>
+    function formdata() {
+        const name = document.getElementById('name').value;
+        const age = document.getElementById('age').value;
+        const email = document.getElementById('email').value;
+        const genderElems = document.getElementsByName('gender');
+        let gender = '';
+        for (const g of genderElems) {
+            if (g.checked) {
+                gender = g.value;
+                break;
+            }
+        }
+
+        if (!name || !age || !email || !gender) {
+            alert("Please fill out all fields.");
+            return;
+        }
+
+        const table = document.getElementById("outputTable");
+        const newRow = table.insertRow(-1);
+
+        const nameCell = newRow.insertCell(0);
+        const ageCell = newRow.insertCell(1);
+        const genderCell = newRow.insertCell(2);
+        const emailCell = newRow.insertCell(3);
+        const actionsCell = newRow.insertCell(4);
+
+        nameCell.textContent = name;
+        ageCell.textContent = age;
+        genderCell.textContent = gender;
+        emailCell.textContent = email;
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.onclick = function () {
+            table.deleteRow(newRow.rowIndex);
+        };
+        actionsCell.appendChild(deleteBtn);
+
+     
+        document.getElementById('res').reset();
+    }
+</script> -->
+
+<!-- <button id="btn">Show</button>
+
+<script>
+    var button=document.getElementById("btn")
+    button.addEventListener("click",function(){
+        alert("hello")
+      
+    })
+
+    button.addEventListener("mouseover",function(){
+        alert("mouse over")
+        console.log("buttonclicked",alert)
+    })  
+</script> -->
+
+
+<!-- <style>
+    .one{
+        background-color: red;
+        height: 100px;
+        width:100px;
+        margin:5px;
+        position:static;
+
+    }
+    .two{
+        background-color: yellow;
+        
+        height: 100px;
+        width:100px;
+        margin:5px;
+        position:relative;
+        left:50px;
+        top:20px;
+        z-index: 7;
+    }
+    .three{
+        background-color: blue;
+        height: 100px;
+        width:100px;
+        margin:5px;
+        position:relative;
+        z-index: 5;
+    }
+</style>
+<div class="one"></div>
+<div class="two"></div>
+<div class="three"></div> -->
+
+<style>
+    div{
+        border: solid black 2px;
+        height:100px;
+        width: 200px;
+        margin-top: 100px;
+        margin-left: 100px;
+    }
+    h1{
+        
+    
+        position:absolute;
+        left:20px;
+
+    }
+
+</style>
+<div >
+    <h1 >Hello</h1>
+</div>
